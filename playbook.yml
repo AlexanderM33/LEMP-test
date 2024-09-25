@@ -48,6 +48,6 @@
 
     - name: deploy Docker Compose stack
       community.docker.docker_compose_v2:
-        project_src: /home/user/docker-compose-lemp-stack/
+        project_src: /home/user/docker-compose-lemp-stack/docker-compose-LEMP/
         files:
         - docker-compose.yml
