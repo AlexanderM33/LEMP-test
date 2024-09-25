@@ -42,3 +42,12 @@
 
     - name: Start docker daemon
       service: name=docker state=started enabled=yes
+
+    - name: Deploy site files from Github repository
+      git: repo=https://github.com/AlexanderM33/LEMP-test.git dest=/home/user/docker-compose-lemp-stack update=yes force=yes
+
+    - name: deploy Docker Compose stack
+      community.docker.docker_compose_v2:
+        project_src: /home/user/docker-compose-lemp-stack/
+        files:
+        - docker-compose.yml
