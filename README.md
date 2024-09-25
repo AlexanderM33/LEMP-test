@@ -1,6 +1,7 @@
 # LEMP-test
 
 Для начала создаем вручную ВМ в яндекс облаке, на которой ансибл выполняет установку докера и docker-compose
+
 Затем ансибл копирует из репозитория конфигурационные файлы и docker-compose.yml
 
 <details close>
@@ -119,6 +120,22 @@ services:
 volumes:
 
   mysqldata:
+ ```
+ </details>
+
+<details close>
+<summary>Dockerfile</summary>
+<br>
+ 
+ ```
+FROM php:8.2-fpm
+
+# Installing dependencies for the PHP modules
+RUN apt-get update && \
+    apt-get install -y zip libzip-dev libpng-dev
+
+# Installing additional PHP modules
+RUN docker-php-ext-install mysqli pdo pdo_mysql gd zip
  ```
  </details>
 
