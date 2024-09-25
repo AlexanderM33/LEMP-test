@@ -8,7 +8,7 @@
 
 Затем ансибл копирует из репозитория конфигурационные файлы и docker-compose.yml
 
-В итоге проекто получилтся таким:
+В итоге проект получился таким:
 https://github.com/AlexanderM33/LEMP-test/tree/main/docker-compose-LEMP
 
 
